@@ -74,7 +74,7 @@ Run the tests with `python -m pytest -q`.
 ## Project structure
 
 
-```virtual-battery-lab/
+virtual-battery-lab/
 ├── main.py # entry point: python main.py
 ├── requirements.txt # numpy, matplotlib, PyQt5, pytest
 ├── README.md
@@ -94,7 +94,7 @@ Run the tests with `python -m pytest -q`.
 │ ├── test_cell.py
 │ ├── test_simulate.py
 │ └── test_export.py
-└── docs/ # screenshots and demo GIF```
+└── docs/ # screenshots and demo GIF
 
 
 The `model/` package contains no GUI code, so it can be tested and reused on its own.
