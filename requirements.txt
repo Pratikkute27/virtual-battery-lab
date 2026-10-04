@@ -1,0 +1,4 @@
+numpy>=1.24
+matplotlib>=3.7
+PyQt5>=5.15
+pytest>=7.0
