@@ -3,7 +3,7 @@
 **Why does an EV lose usable range and power when the battery is cold and the load is high?**
 A desktop app that lets you see it in seconds, no test bench needed.
 
-
+![Demo](docs/demo.gif)
 
 ## Problem
 
@@ -47,17 +47,21 @@ and the pack hits cutoff with about 18 % of its charge unused.
 ![25 °C](docs/screenshot_25C.png)
 ![0 °C](docs/screenshot_0C.png)
 ![I-V](docs/screenshot_iv.png)
+
 > **Two power numbers.** "Peak power (pulse)" uses R0 only (an instant load step).
 > The I-V sweep shows steady-state power (R0 + R1), which stops where the voltage
 > hits the cutoff. At 0 °C that is about 19 kW at 67 A.
+
 > **Illustrative parameters.** The OCV table, R0, R1, tau and the Arrhenius
 > activation temperature are typical values for a generic NMC cell, not measured data
 > and not tied to any manufacturer. The *trend* is physical; the exact percentages are not.
 
 ## How to run
 
+Requires Python 3.9 or newer.
+
 ```bash
-git clone [https://github.com/](https://github.com/)Pratikkute27/virtual-battery-lab.git
+git clone [https://github.com/Pratikkute27/virtual-battery-lab.git](https://github.com/Pratikkute27/virtual-battery-lab.git)
 cd virtual-battery-lab
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
@@ -69,7 +73,8 @@ Run the tests with `python -m pytest -q`.
 
 ## Project structure
 
-virtual-battery-lab/
+
+```virtual-battery-lab/
 ├── main.py # entry point: python main.py
 ├── requirements.txt # numpy, matplotlib, PyQt5, pytest
 ├── README.md
@@ -89,21 +94,16 @@ virtual-battery-lab/
 │ ├── test_cell.py
 │ ├── test_simulate.py
 │ └── test_export.py
-├── validation/
-│ └── simulink_compare.md # Simulink comparison recipe
-└── docs/ # screenshots and demo GIF
+└── docs/ # screenshots and demo GIF```
+
 
 The `model/` package contains no GUI code, so it can be tested and reused on its own.
-
-## Model validation (Simulink)
-
-See `validation/simulink_compare.md` for the comparison against an equivalent
-Simulink/Simscape cell.
 
 ## Limitations
 
 - One RC pair; no hysteresis, ageing, or thermal self-heating.
 - Capacity is not derated at low temperature; the loss comes from resistance alone.
+- Not validated against measured cell data.
 - Discharge only.
 
 ## Author
