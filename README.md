@@ -97,6 +97,7 @@ virtual-battery-lab/
 └── docs/ # screenshots and demo GIF
 
 
+
 The `model/` package contains no GUI code, so it can be tested and reused on its own.
 
 ## Limitations
