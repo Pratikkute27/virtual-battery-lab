@@ -61,7 +61,7 @@ and the pack hits cutoff with about 18 % of its charge unused.
 Requires Python 3.9 or newer.
 
 ```bash
-git clone [https://github.com/Pratikkute27/virtual-battery-lab.git](https://github.com/Pratikkute27/virtual-battery-lab.git)
+git clone https://github.com/Pratikkute27/virtual-battery-lab.git
 cd virtual-battery-lab
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
@@ -74,6 +74,7 @@ Run the tests with `python -m pytest -q`.
 ## Project structure
 
 
+```
 virtual-battery-lab/
 ├── main.py # entry point: python main.py
 ├── requirements.txt # numpy, matplotlib, PyQt5, pytest
@@ -95,7 +96,7 @@ virtual-battery-lab/
 │ ├── test_simulate.py
 │ └── test_export.py
 └── docs/ # screenshots and demo GIF
-
+```
 
 
 The `model/` package contains no GUI code, so it can be tested and reused on its own.
